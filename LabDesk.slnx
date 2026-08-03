@@ -1,0 +1,21 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/LabDesk.Api/LabDesk.Api.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/" />
+  <Folder Name="/src/Module/Identity/">
+    <Project Path="src/Module/Identity/LabDesk.Modules.Identity.Application/LabDesk.Modules.Identity.Application.csproj" />
+    <Project Path="src/Module/Identity/LabDesk.Modules.Identity.Domain/LabDesk.Modules.Identity.Domain.csproj" />
+    <Project Path="src/Module/Identity/LabDesk.Modules.Identity.Infrastructure/LabDesk.Modules.Identity.Infrastructure.csproj" />
+    <Project Path="src/Module/Identity/LabDesk.Modules.Identity.Presentation/LabDesk.Modules.Identity.Presentation.csproj" />
+  </Folder>
+  <Folder Name="/src/SeedWork/">
+    <Project Path="src/SeedWork/LabDesk.SeedWork.Application/LabDesk.SeedWork.Application.csproj" />
+    <Project Path="src/SeedWork/LabDesk.SeedWork.Domain/LabDesk.SeedWork.Domain.csproj" />
+    <Project Path="src/SeedWork/LabDesk.SeedWork.Infrastructure/LabDesk.SeedWork.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/test/" />
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
+</Solution>
