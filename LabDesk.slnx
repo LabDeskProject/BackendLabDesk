@@ -2,7 +2,13 @@
   <Folder Name="/src/">
     <Project Path="src/LabDesk.Api/LabDesk.Api.csproj" />
   </Folder>
+  <Folder Name="/src/BuildingBlocks/">
+    <Project Path="src/BuildingBlocks/LabDesk.BuildingBlocks.Application/LabDesk.BuildingBlocks.Application.csproj" />
+    <Project Path="src/BuildingBlocks/LabDesk.BuildingBlocks.Domain/LabDesk.BuildingBlocks.Domain.csproj" />
+    <Project Path="src/BuildingBlocks/LabDesk.BuildingBlocks.Infrastructure/LabDesk.BuildingBlocks.Infrastructure.csproj" />
+  </Folder>
   <Folder Name="/src/Module/" />
+  <Folder Name="/src/Module/Access/" />
   <Folder Name="/src/Module/Identity/">
     <Project Path="src/Module/Identity/LabDesk.Modules.Identity.Application/LabDesk.Modules.Identity.Application.csproj" />
     <Project Path="src/Module/Identity/LabDesk.Modules.Identity.Domain/LabDesk.Modules.Identity.Domain.csproj" />

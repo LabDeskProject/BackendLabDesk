@@ -7,6 +7,7 @@ using System.Text;
 
 namespace LabDesk.Modules.Identity.Infrastructure.Persistence.Configurations
 {
+    //Fluent API
     public class TeamConfiguration : IEntityTypeConfiguration<Team>
     {
         public void Configure(EntityTypeBuilder<Team> builder)
