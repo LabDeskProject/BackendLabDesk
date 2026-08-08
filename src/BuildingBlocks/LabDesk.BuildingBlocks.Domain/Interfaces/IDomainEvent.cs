@@ -1,8 +1,10 @@
 ﻿using System;
 using MediatR;
-public interface IDomainEvent : INotification
+namespace LabDesk.BuildingBlocks.Domain
 {
-    Guid EventId { get; }
-    DateTime OccurredOn { get; }
+    public interface IDomainEvent : INotification
+    {
+        Guid Id { get; }
+        DateTime OccurredOn { get; }
+    }
 }
-    

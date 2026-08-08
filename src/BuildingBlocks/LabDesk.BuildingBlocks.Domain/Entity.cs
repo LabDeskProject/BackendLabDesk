@@ -1,11 +1,28 @@
-﻿using LabDesk.SeedWork.Domain.Interfaces;
+﻿using LabDesk.BuildingBlocks.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 
-namespace LabDesk.SeedWork.Domain
+namespace LabDesk.BuildingBlocks.Domain
 {
+    public abstract class Entity
+    {
+        private List<IDomainEvent>? _domainEvents;
+
+        public IReadOnlyCollection<IDomainEvent>? DomainEvents => _domainEvents?.AsReadOnly();
+
+        public void AddDomainEvent(IDomainEvent eventItem)
+        {
+            _domainEvents ??= new List<IDomainEvent>();
+            _domainEvents.Add(eventItem);
+        }
+
+        public void ClearDomainEvents()
+        {
+            _domainEvents?.Clear();
+        }
+    }
     public abstract class Entity<TId>
     {
         public TId Id { get; protected set; } = default!; //Avoid Nullable Warning
@@ -40,7 +57,7 @@ namespace LabDesk.SeedWork.Domain
         public override int GetHashCode()
         {
             return (GetType().ToString() + Id).GetHashCode();
-        }
+        }   
 
         public static bool operator ==(Entity<TId>? left, Entity<TId>? right)
         {

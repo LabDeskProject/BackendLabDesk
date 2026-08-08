@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LabDesk.SeedWork.Domain.Interfaces
+namespace LabDesk.BuildingBlocks.Domain.Interfaces
 {
     public interface IAggregateRoot
     {

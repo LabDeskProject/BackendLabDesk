@@ -1,10 +1,10 @@
-﻿using LabDesk.SeedWork.Application.Results;
+﻿using LabDesk.BuildingBlocks.Application.Results;
 using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LabDesk.SeedWork.Application.CQRS
+namespace LabDesk.BuildingBlocks.Application.CQRS
 {
     public interface IQuery<TRespone> : IRequest<Result<TRespone>> { }
 

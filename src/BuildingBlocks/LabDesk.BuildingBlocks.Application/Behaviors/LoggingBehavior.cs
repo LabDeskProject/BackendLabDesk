@@ -1,4 +1,4 @@
-﻿using LabDesk.SeedWork.Application.Interfaces;
+﻿using LabDesk.BuildingBlocks.Application.Interfaces;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using System;
@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace LabDesk.SeedWork.Application.Behaviors
+namespace LabDesk.BuildingBlocks.Application.Behaviors
 {
     public class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
      where TRequest : notnull

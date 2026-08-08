@@ -1,16 +1,16 @@
 ﻿using FluentValidation;
-using LabDesk.SeedWork.Application.Behaviors;
+using LabDesk.BuildingBlocks.Application.Behaviors;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 
-namespace LabDesk.SeedWork.Application;
+namespace LabDesk.BuildingBlocks.Application;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddApplicationSeedWork(
+    public static IServiceCollection AddApplication(
         this IServiceCollection services,
         Assembly assembly)
     {

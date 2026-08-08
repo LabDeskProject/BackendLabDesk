@@ -1,19 +1,11 @@
-using LabDesk.Modules.Identity.Infrastructure;
-using LabDesk.Modules.Identity.Presentation;
 using Microsoft.OpenApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddMediatR(cfg =>
-{
-    cfg.RegisterServicesFromAssembly(AssemblyReference.Assembly);
-});
 
-builder.Services.AddIdentityInfrastructure(builder.Configuration);
 
 // AddApplicationPart
-builder.Services.AddControllers()
-    .AddApplicationPart(AssemblyReference.Assembly);
+
 
 
 

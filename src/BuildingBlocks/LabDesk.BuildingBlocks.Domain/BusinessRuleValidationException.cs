@@ -1,9 +1,9 @@
-﻿using LabDesk.SeedWork.Domain.Interfaces;
+﻿using LabDesk.BuildingBlocks.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LabDesk.SeedWork.Domain
+namespace LabDesk.BuildingBlocks.Domain
 {
     public class BusinessRuleValidationException : Exception
     {

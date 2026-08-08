@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LabDesk.SeedWork.Application.Results
+namespace LabDesk.BuildingBlocks.Application.Results
 {
     public class PagedResult<T>
     {

@@ -14,11 +14,11 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["src/LabDesk.Api/LabDesk.Api.csproj", "src/LabDesk.Api/"]
 COPY ["src/Module/Identity/LabDesk.Modules.Identity.Application/LabDesk.Modules.Identity.Application.csproj", "src/Module/Identity/LabDesk.Modules.Identity.Application/"]
-COPY ["src/SeedWork/LabDesk.SeedWork.Application/LabDesk.SeedWork.Application.csproj", "src/SeedWork/LabDesk.SeedWork.Application/"]
-COPY ["src/SeedWork/LabDesk.SeedWork.Domain/LabDesk.SeedWork.Domain.csproj", "src/SeedWork/LabDesk.SeedWork.Domain/"]
+COPY ["src/BuildingBlocks/LabDesk.BuildingBlocks.Application/LabDesk.BuildingBlocks.Application.csproj", "src/BuildingBlocks/LabDesk.BuildingBlocks.Application/"]
+COPY ["src/BuildingBlocks/LabDesk.BuildingBlocks.Domain/LabDesk.BuildingBlocks.Domain.csproj", "src/BuildingBlocks/LabDesk.BuildingBlocks.Domain/"]
 COPY ["src/Module/Identity/LabDesk.Modules.Identity.Domain/LabDesk.Modules.Identity.Domain.csproj", "src/Module/Identity/LabDesk.Modules.Identity.Domain/"]
 COPY ["src/Module/Identity/LabDesk.Modules.Identity.Infrastructure/LabDesk.Modules.Identity.Infrastructure.csproj", "src/Module/Identity/LabDesk.Modules.Identity.Infrastructure/"]
-COPY ["src/SeedWork/LabDesk.SeedWork.Infrastructure/LabDesk.SeedWork.Infrastructure.csproj", "src/SeedWork/LabDesk.SeedWork.Infrastructure/"]
+COPY ["src/BuildingBlocks/LabDesk.BuildingBlocks.Infrastructure/LabDesk.BuildingBlocks.Infrastructure.csproj", "src/BuildingBlocks/LabDesk.BuildingBlocks.Infrastructure/"]
 COPY ["src/Module/Identity/LabDesk.Modules.Identity.Presentation/LabDesk.Modules.Identity.Presentation.csproj", "src/Module/Identity/LabDesk.Modules.Identity.Presentation/"]
 RUN dotnet restore "./src/LabDesk.Api/LabDesk.Api.csproj"
 COPY . .

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LabDesk.SeedWork.Domain
+namespace LabDesk.BuildingBlocks.Domain
 {
     public abstract class TypedIdValueBase : IEquatable<TypedIdValueBase>
     {

@@ -1,12 +1,12 @@
 ﻿using FluentValidation;
-using LabDesk.SeedWork.Application.Results;
+using LabDesk.BuildingBlocks.Application.Results;
 using MediatR;
-using Microsoft.Extensions.Validation;
+
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LabDesk.SeedWork.Application.Behaviors
+namespace LabDesk.BuildingBlocks.Application.Behaviors
 {
     public class ValidationBehavior<TRequest , TRespone> : IPipelineBehavior<TRequest , TRespone>
         where TRequest : IRequest<TRespone>

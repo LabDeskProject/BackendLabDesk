@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlTypes;
 using System.Text;
 
-namespace LabDesk.SeedWork.Application.Interfaces
+namespace LabDesk.BuildingBlocks.Application.Interfaces
 {
     public interface ICurrentUserService
     {

@@ -1,11 +1,11 @@
-﻿using LabDesk.SeedWork.Domain.Interfaces;
+﻿using LabDesk.BuildingBlocks.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace LabDesk.SeedWork.Domain
+namespace LabDesk.BuildingBlocks.Domain
 {
     // Compare value like: Money, Address, RequestNumber,... Instead of comparing ID
     public abstract class ValueObject : IEquatable<ValueObject>
