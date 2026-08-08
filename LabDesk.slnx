@@ -7,6 +7,10 @@
     <Project Path="src/BuildingBlocks/LabDesk.BuildingBlocks.Domain/LabDesk.BuildingBlocks.Domain.csproj" />
     <Project Path="src/BuildingBlocks/LabDesk.BuildingBlocks.Infrastructure/LabDesk.BuildingBlocks.Infrastructure.csproj" />
   </Folder>
+  <Folder Name="/src/BuildingBlocks/Test/">
+    <Project Path="../LabDesk.BuildingBlocks.Application.UnitTests/LabDesk.BuildingBlocks.Application.UnitTests.csproj" Id="a48a16f3-b41c-4a36-9ba7-02c890974cc5" />
+    <Project Path="../LabDesk.BuildingBlocks.IntegrationTests/LabDesk.BuildingBlocks.IntegrationTests.csproj" Id="24b05ac4-f8aa-48eb-a30b-f23cff5491bb" />
+  </Folder>
   <Folder Name="/test/" />
   <Project Path="docker-compose.dcproj">
     <Build />
