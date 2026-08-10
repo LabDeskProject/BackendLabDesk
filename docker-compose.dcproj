@@ -9,6 +9,7 @@
     <DockerServiceName>labdesk.api</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="AUTH_SETUP.md" />
     <None Include="docker-compose.override.yml">
       <DependentUpon>docker-compose.yml</DependentUpon>
     </None>

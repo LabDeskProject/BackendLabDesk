@@ -11,6 +11,13 @@
     <Project Path="../LabDesk.BuildingBlocks.Application.UnitTests/LabDesk.BuildingBlocks.Application.UnitTests.csproj" Id="a48a16f3-b41c-4a36-9ba7-02c890974cc5" />
     <Project Path="../LabDesk.BuildingBlocks.IntegrationTests/LabDesk.BuildingBlocks.IntegrationTests.csproj" Id="24b05ac4-f8aa-48eb-a30b-f23cff5491bb" />
   </Folder>
+  <Folder Name="/src/Module/" />
+  <Folder Name="/src/Module/IdentityandAccess/" />
+  <Folder Name="/src/Module/IdentityandAccess/UserAccess/">
+    <Project Path="../Application/Application.csproj" Id="d14df198-a947-4974-a15e-eaefb3339182" />
+    <Project Path="../Infrastructure/Infrastructure.csproj" Id="68f790b0-95cc-4698-8930-7d668955ab21" />
+    <Project Path="../UserAccess/Domain.csproj" Id="ec910870-da55-4fbe-91ca-cbed0bb0dd3d" />
+  </Folder>
   <Folder Name="/test/" />
   <Project Path="docker-compose.dcproj">
     <Build />
