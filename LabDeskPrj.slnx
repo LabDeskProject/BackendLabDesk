@@ -1,0 +1,21 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Host/Host.csproj" />
+  </Folder>
+  <Folder Name="/src/BuildingBlocks/">
+    <Project Path="src/BuildingBlocks/BuildingBlocks.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/" />
+  <Folder Name="/src/Module/Core/">
+    <Project Path="src/Module/Core/APICore/APICore.csproj" />
+    <Project Path="src/Module/Core/ApplicationCore/ApplicationCore.csproj" />
+    <Project Path="src/Module/Core/DomainCore/DomainCore.csproj" />
+    <Project Path="src/Module/Core/InfrastructureCore/InfrastructureCore.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/IdentityAccess/">
+    <Project Path="src/Module/IdentityAccess/API/IdentityAccess.API.csproj" />
+    <Project Path="src/Module/IdentityAccess/Application/Application.csproj" />
+    <Project Path="src/Module/IdentityAccess/Domain/Domain.csproj" />
+    <Project Path="src/Module/IdentityAccess/Infrastructure/Infrastructure.csproj" />
+  </Folder>
+</Solution>

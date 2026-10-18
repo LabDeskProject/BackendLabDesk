@@ -1,0 +1,6 @@
+*.pdf
+*.md
+.companion/
+.vs/
+**/bin/
+**/obj/
