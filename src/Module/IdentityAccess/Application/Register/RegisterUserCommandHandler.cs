@@ -15,16 +15,16 @@ namespace Application.Register
     {
         private readonly IUserRepository _userRepository;
         private readonly IPasswordHasher _passwordHasher;
-        private readonly IUnitOfWorkIdentityAccess _unitOfWork;
+        private readonly IUnitOfWorkIdentityAccess _unitOfWorkIdentityAccess;
 
         public RegisterUserCommandHandler(
             IUserRepository userRepository,
             IPasswordHasher passwordHasher,
-            IUnitOfWorkIdentityAccess unitOfWork)
+            IUnitOfWorkIdentityAccess unitOfWorkIdentityAccess)
         {
             _userRepository = userRepository;
             _passwordHasher = passwordHasher;
-            _unitOfWork = unitOfWork;
+            _unitOfWorkIdentityAccess = unitOfWorkIdentityAccess;
         }
 
         public async Task<RegisterUserResult> Handle(
@@ -55,7 +55,7 @@ namespace Application.Register
 
             _userRepository.Add(user);
 
-            await _unitOfWork.SaveChangesAsync(
+            await _unitOfWorkIdentityAccess.SaveChangesAsync(
                 cancellationToken);
 
             return new RegisterUserResult(

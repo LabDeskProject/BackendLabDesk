@@ -19,7 +19,7 @@ namespace Infrastructure.Repositories
         public async Task<User?> GetByEmailAsync(string email, CancellationToken cancellationToken)
         {
             return await _dbContext.Users
-                .SingleOrDefaultAsync(x => x.Email == email, cancellationToken);
+                .SingleOrDefaultAsync(x => x.Email == email && x.IsActive, cancellationToken);
         }
 
         public Task<User?> GetByIdAsync(Guid userId, CancellationToken cancellationToken) =>

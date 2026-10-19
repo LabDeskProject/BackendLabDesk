@@ -1,4 +1,4 @@
-﻿using Domain.User;
+using Domain.User;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -31,6 +31,7 @@ namespace Infrastructure.Persistence.Configurations
 
             builder.Property(x => x.IsActive)
                 .IsRequired();
+            builder.Property(x => x.IsGlobalAdmin).IsRequired().HasDefaultValue(false);
 
             builder.HasIndex(x => x.Email)
                 .IsUnique();

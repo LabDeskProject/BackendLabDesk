@@ -16,7 +16,6 @@ namespace IdentityAccess.API.Controllers
         private readonly IMediator _mediator;
         private readonly IMapper _mapper;
         private readonly IUserContext _userContext;
-
         public AuthController(
             IMediator mediator,
             IMapper mapper,

@@ -7,10 +7,7 @@ namespace Application.Interface
 {
     public interface ILoginRepository
     {
-        Task<User?> GetByEmailAsync(
-        string email,
-        CancellationToken cancellationToken);
-
+        Task<User?> GetByEmailAsync(string email, CancellationToken cancellationToken);
         Task<User?> GetByIdAsync(Guid userId, CancellationToken cancellationToken);
     }
 }

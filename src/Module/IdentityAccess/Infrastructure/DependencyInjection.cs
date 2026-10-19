@@ -41,20 +41,16 @@ namespace Infrastructure
                 .Validate(x => x.AbsoluteExpirationInDays >= x.ExpirationInDays && x.AbsoluteExpirationInDays <= 90, "RefreshToken:AbsoluteExpirationInDays must be between expiration days and 90.")
                 .Validate(x => x.AbsoluteExpirationInDays <= 30, "RefreshToken:AbsoluteExpirationInDays must be no more than 30 days.")
                 .ValidateOnStart();
+
             services.AddScoped<ILoginRepository, LoginRepository>();
             services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
             services.AddSingleton<IRefreshTokenService, RefreshTokenService>();
             services.AddSingleton<IAccessTokenLifetime, AccessTokenLifetime>();
             services.AddSingleton<IRefreshTokenLifetime, RefreshTokenLifetime>();
-
             services.AddScoped<Verify,VerifyHasher>();
-
             services.AddScoped<ITokenProvider,JwtTokenProvider>();
-
             services.AddScoped<IUserRepository, UserRepository>();
-
             services.AddScoped<IPasswordHasher, PasswordHasher>();
-
             services.AddScoped<IUnitOfWorkIdentityAccess, IdentityAccessUnitOfWork>();
 
             return services;

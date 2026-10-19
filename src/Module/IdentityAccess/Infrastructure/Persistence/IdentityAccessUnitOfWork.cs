@@ -6,8 +6,7 @@ using System.Text;
 
 namespace Infrastructure.Persistence
 {
-    public sealed class IdentityAccessUnitOfWork
-    : IUnitOfWorkIdentityAccess
+    public sealed class IdentityAccessUnitOfWork: IUnitOfWorkIdentityAccess
     {
         private readonly IdentityAccessDbContext _dbContext;
 
