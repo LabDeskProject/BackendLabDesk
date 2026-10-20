@@ -1,0 +1,33 @@
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+namespace OrganizationManagement.Infrastructure.Migrations
+{
+    /// <inheritdoc />
+    public partial class AddOrganizationMembershipForeignKey : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.AddForeignKey(
+                name: "FK_OrganizationUsers_Organizations_OrganizationId",
+                schema: "organization_management",
+                table: "OrganizationUsers",
+                column: "OrganizationId",
+                principalSchema: "organization_management",
+                principalTable: "Organizations",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Restrict);
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropForeignKey(
+                name: "FK_OrganizationUsers_Organizations_OrganizationId",
+                schema: "organization_management",
+                table: "OrganizationUsers");
+        }
+    }
+}

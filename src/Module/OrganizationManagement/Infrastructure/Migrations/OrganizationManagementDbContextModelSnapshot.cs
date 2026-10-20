@@ -23,7 +23,7 @@ namespace OrganizationManagement.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("DomainCore.Organizations.Organization", b =>
+            modelBuilder.Entity("OrganizationManagement.Domain.Organization", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -61,7 +61,7 @@ namespace OrganizationManagement.Infrastructure.Migrations
                     b.ToTable("Organizations", "organization_management");
                 });
 
-            modelBuilder.Entity("DomainCore.Organizations.OrganizationUser", b =>
+            modelBuilder.Entity("OrganizationManagement.Domain.OrganizationUser", b =>
                 {
                     b.Property<Guid>("OrganizationId")
                         .HasColumnType("uniqueidentifier");
@@ -85,7 +85,7 @@ namespace OrganizationManagement.Infrastructure.Migrations
                     b.ToTable("OrganizationUsers", "organization_management");
                 });
 
-            modelBuilder.Entity("DomainCore.Service.Service", b =>
+            modelBuilder.Entity("OrganizationManagement.Domain.Service", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -126,7 +126,7 @@ namespace OrganizationManagement.Infrastructure.Migrations
                     b.ToTable("Services", "organization_management");
                 });
 
-            modelBuilder.Entity("DomainCore.Teams.Team", b =>
+            modelBuilder.Entity("OrganizationManagement.Domain.Team", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -165,7 +165,7 @@ namespace OrganizationManagement.Infrastructure.Migrations
                     b.ToTable("Teams", "organization_management");
                 });
 
-            modelBuilder.Entity("DomainCore.Teams.TeamMember", b =>
+            modelBuilder.Entity("OrganizationManagement.Domain.TeamMember", b =>
                 {
                     b.Property<Guid>("TeamId")
                         .HasColumnType("uniqueidentifier");
@@ -181,15 +181,24 @@ namespace OrganizationManagement.Infrastructure.Migrations
                     b.ToTable("TeamMembers", "organization_management");
                 });
 
-            modelBuilder.Entity("DomainCore.Service.Service", b =>
+            modelBuilder.Entity("OrganizationManagement.Domain.OrganizationUser", b =>
                 {
-                    b.HasOne("DomainCore.Organizations.Organization", "Organization")
+                    b.HasOne("OrganizationManagement.Domain.Organization", null)
+                        .WithMany("Members")
+                        .HasForeignKey("OrganizationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("OrganizationManagement.Domain.Service", b =>
+                {
+                    b.HasOne("OrganizationManagement.Domain.Organization", "Organization")
                         .WithMany()
                         .HasForeignKey("OrganizationId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("DomainCore.Teams.Team", "ResponsibleTeam")
+                    b.HasOne("OrganizationManagement.Domain.Team", "ResponsibleTeam")
                         .WithMany()
                         .HasForeignKey("ResponsibleTeamId", "OrganizationId")
                         .HasPrincipalKey("Id", "OrganizationId")
@@ -201,9 +210,9 @@ namespace OrganizationManagement.Infrastructure.Migrations
                     b.Navigation("ResponsibleTeam");
                 });
 
-            modelBuilder.Entity("DomainCore.Teams.Team", b =>
+            modelBuilder.Entity("OrganizationManagement.Domain.Team", b =>
                 {
-                    b.HasOne("DomainCore.Organizations.Organization", "Organization")
+                    b.HasOne("OrganizationManagement.Domain.Organization", "Organization")
                         .WithMany("Teams")
                         .HasForeignKey("OrganizationId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -212,9 +221,9 @@ namespace OrganizationManagement.Infrastructure.Migrations
                     b.Navigation("Organization");
                 });
 
-            modelBuilder.Entity("DomainCore.Teams.TeamMember", b =>
+            modelBuilder.Entity("OrganizationManagement.Domain.TeamMember", b =>
                 {
-                    b.HasOne("DomainCore.Teams.Team", "Team")
+                    b.HasOne("OrganizationManagement.Domain.Team", "Team")
                         .WithMany("Members")
                         .HasForeignKey("TeamId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -223,12 +232,14 @@ namespace OrganizationManagement.Infrastructure.Migrations
                     b.Navigation("Team");
                 });
 
-            modelBuilder.Entity("DomainCore.Organizations.Organization", b =>
+            modelBuilder.Entity("OrganizationManagement.Domain.Organization", b =>
                 {
+                    b.Navigation("Members");
+
                     b.Navigation("Teams");
                 });
 
-            modelBuilder.Entity("DomainCore.Teams.Team", b =>
+            modelBuilder.Entity("OrganizationManagement.Domain.Team", b =>
                 {
                     b.Navigation("Members");
                 });

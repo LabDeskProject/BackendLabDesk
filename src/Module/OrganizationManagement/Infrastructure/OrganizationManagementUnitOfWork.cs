@@ -1,5 +1,4 @@
-using OrganizationManagement.Domain;
-using DomainCore.Interfaces;
+using OrganizationManagement.Domain.Interfaces;
 
 namespace OrganizationManagement.Infrastructure;
 

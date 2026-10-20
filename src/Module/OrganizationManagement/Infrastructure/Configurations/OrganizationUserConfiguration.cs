@@ -1,4 +1,4 @@
-using DomainCore.Organizations;
+using OrganizationManagement.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -14,5 +14,6 @@ public sealed class OrganizationUserConfiguration : IEntityTypeConfiguration<Org
         builder.Property(x => x.RemovedAtUtc);
         builder.HasIndex(x => new { x.OrganizationId, x.RemovedAtUtc });
         builder.Property(x => x.JoinedAt).IsRequired();
+        builder.HasOne<Organization>().WithMany(x => x.Members).HasForeignKey(x => x.OrganizationId).OnDelete(DeleteBehavior.Restrict);
     }
 }

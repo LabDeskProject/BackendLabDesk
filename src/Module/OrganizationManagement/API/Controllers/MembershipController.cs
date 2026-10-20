@@ -1,8 +1,10 @@
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using OrganizationManagement.Application.Slices;
-using DomainCore.Organizations;
+using OrganizationManagement.Application.Slices.Memberships.AddOrganizationMember;
+using OrganizationManagement.Application.Slices.Memberships.ChangeOrganizationMemberRole;
+using OrganizationManagement.Application.Slices.Memberships.RemoveOrganizationMember;
+using OrganizationManagement.Domain;
 namespace OrganizationManagement.API.Controllers;
 [ApiController, Authorize, Route("api/organizations/{organizationId:guid}/members")]
 public sealed class MembershipController(ISender sender) : ControllerBase

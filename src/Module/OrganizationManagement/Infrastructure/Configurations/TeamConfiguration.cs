@@ -1,4 +1,4 @@
-using DomainCore.Teams;
+using OrganizationManagement.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

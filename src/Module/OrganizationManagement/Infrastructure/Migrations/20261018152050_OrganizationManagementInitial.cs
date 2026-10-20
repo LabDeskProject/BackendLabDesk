@@ -11,7 +11,7 @@ namespace OrganizationManagement.Infrastructure.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.Sql("IF OBJECT_ID(N'[organization_management].[Organizations]', N'U') IS NOT NULL THROW 51000, 'OrganizationManagement migration cannot create tables over existing Core tables; migrate/backup the legacy Core schema first.', 1;");
+            migrationBuilder.Sql("IF OBJECT_ID(N'[organization_management].[Organizations]', N'U') IS NOT NULL THROW 51000, 'OrganizationManagement migration cannot create tables over existing target tables; reconcile existing database schema first.', 1;");
 
             migrationBuilder.EnsureSchema(
                 name: "organization_management");

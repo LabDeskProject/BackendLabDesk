@@ -1,4 +1,4 @@
-namespace OrganizationManagement.Domain;
+namespace OrganizationManagement.Domain.Interfaces;
 
 public interface IOrganizationManagementUnitOfWork
 {

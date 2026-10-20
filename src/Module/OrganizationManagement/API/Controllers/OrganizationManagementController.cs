@@ -1,7 +1,10 @@
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using OrganizationManagement.Application.Slices;
+using OrganizationManagement.Application.Slices.Organizations.CreateOrganization;
+using OrganizationManagement.Application.Slices.Organizations.ListMyOrganizations;
+using OrganizationManagement.Application.Slices.Organizations.ListOrganizationMembers;
+using OrganizationManagement.Application.Slices.Teams.CreateTeam;
 
 namespace OrganizationManagement.API.Controllers;
 

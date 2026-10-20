@@ -1,7 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using DomainCore.Organizations;
-using DomainCore.Teams;
-using DomainCore.Service;
+using OrganizationManagement.Domain;
 
 namespace OrganizationManagement.Infrastructure;
 

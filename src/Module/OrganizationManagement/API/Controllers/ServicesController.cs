@@ -1,7 +1,9 @@
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using OrganizationManagement.Application.Slices;
+using OrganizationManagement.Application.Slices.Services.CreateService;
+using OrganizationManagement.Application.Slices.Services.GetService;
+using OrganizationManagement.Application.Slices.Services.ListOrganizationServices;
 
 namespace OrganizationManagement.API.Controllers;
 
