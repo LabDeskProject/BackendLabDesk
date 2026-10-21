@@ -6,16 +6,132 @@
     <Project Path="src/BuildingBlocks/BuildingBlocks.csproj" />
   </Folder>
   <Folder Name="/src/Module/" />
-  <Folder Name="/src/Module/Core/">
-    <Project Path="src/Module/Core/APICore/APICore.csproj" />
-    <Project Path="src/Module/Core/ApplicationCore/ApplicationCore.csproj" />
-    <Project Path="src/Module/Core/DomainCore/DomainCore.csproj" />
-    <Project Path="src/Module/Core/InfrastructureCore/InfrastructureCore.csproj" />
+  <Folder Name="/src/Module/Assignment/" />
+  <Folder Name="/src/Module/Assignment/API.Assignment/">
+    <Project Path="src/Module/Assignment/API/Assignment.API.csproj" />
   </Folder>
-  <Folder Name="/src/Module/IdentityAccess/">
+  <Folder Name="/src/Module/Assignment/Application.Assignment/">
+    <Project Path="src/Module/Assignment/Application/Assignment.Application.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/Assignment/Domain.Assignment/">
+    <Project Path="src/Module/Assignment/Domain/Assignment.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/Assignment/Infrastructure.Assignment/">
+    <Project Path="src/Module/Assignment/Infrastructure/Assignment.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/Audit/" />
+  <Folder Name="/src/Module/Audit/API.Audit/">
+    <Project Path="src/Module/Audit/API/Audit.API.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/Audit/Application.Audit/">
+    <Project Path="src/Module/Audit/Application/Audit.Application.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/Audit/Domain.Audit/">
+    <Project Path="src/Module/Audit/Domain/Audit.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/Audit/Infrastructure.Audit/">
+    <Project Path="src/Module/Audit/Infrastructure/Audit.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/IdentityAccess/" />
+  <Folder Name="/src/Module/IdentityAccess/API.IdentityAccess/">
     <Project Path="src/Module/IdentityAccess/API/IdentityAccess.API.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/IdentityAccess/Application.IdentityAccess/">
     <Project Path="src/Module/IdentityAccess/Application/Application.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/IdentityAccess/Domain.IdentityAccess/">
     <Project Path="src/Module/IdentityAccess/Domain/Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/IdentityAccess/Infrastructure.IdentityAccess/">
     <Project Path="src/Module/IdentityAccess/Infrastructure/Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/Notification/" />
+  <Folder Name="/src/Module/Notification/API.Notification/">
+    <Project Path="src/Module/Notification/API/Notification.API.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/Notification/Application.Notification/">
+    <Project Path="src/Module/Notification/Application/Notification.Application.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/Notification/Domain.Notification/">
+    <Project Path="src/Module/Notification/Domain/Notification.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/Notification/Infrastructure.Notification/">
+    <Project Path="src/Module/Notification/Infrastructure/Notification.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/OrganizationManagement/" />
+  <Folder Name="/src/Module/OrganizationManagement/API.OrganizationManagement/">
+    <Project Path="src/Module/OrganizationManagement/API/OrganizationManagement.API.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/OrganizationManagement/Application.OrganizationManagement/">
+    <Project Path="src/Module/OrganizationManagement/Application/OrganizationManagement.Application.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/OrganizationManagement/Domain.OrganizationManagement/">
+    <Project Path="src/Module/OrganizationManagement/Domain/OrganizationManagement.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/OrganizationManagement/Infracstructure.OrganizationManagement/">
+    <Project Path="src/Module/OrganizationManagement/Infrastructure/OrganizationManagement.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/RequestManagement/" />
+  <Folder Name="/src/Module/RequestManagement/API.RequestManagement/">
+    <Project Path="src/Module/RequestManagement/API/RequestManagement.API.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/RequestManagement/Application.RequestManagement/">
+    <Project Path="src/Module/RequestManagement/Application/RequestManagement.Application.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/RequestManagement/Domain.RequestManagement/">
+    <Project Path="src/Module/RequestManagement/Domain/RequestManagement.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/RequestManagement/Infrastructure.RequestManagement/">
+    <Project Path="src/Module/RequestManagement/Infrastructure/RequestManagement.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/ServiceCatalog/" />
+  <Folder Name="/src/Module/ServiceCatalog/API.ServerCatalog/">
+    <Project Path="src/Module/ServiceCatalog/API/ServiceCatalog.API.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/ServiceCatalog/Application.ServiceCatalog/">
+    <Project Path="src/Module/ServiceCatalog/Application/ServiceCatalog.Application.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/ServiceCatalog/Domain.ServiceCatalog/">
+    <Project Path="src/Module/ServiceCatalog/Domain/ServiceCatalog.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/ServiceCatalog/Infrastructure.ServiceCatalog/">
+    <Project Path="src/Module/ServiceCatalog/Infrastructure/ServiceCatalog.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/SLA/" />
+  <Folder Name="/src/Module/SLA/API.SLA/">
+    <Project Path="src/Module/SLA/API/SLA.API.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/SLA/Application.SLA/">
+    <Project Path="src/Module/SLA/Application/SLA.Application.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/SLA/Domain.SLA/">
+    <Project Path="src/Module/SLA/Domain/SLA.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/SLA/Infrastructure.SLA/">
+    <Project Path="src/Module/SLA/Infrastructure/SLA.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/WorkflowApproval/" />
+  <Folder Name="/src/Module/WorkflowApproval/API.WorkflowApproval/">
+    <Project Path="src/Module/WorkflowApproval/API/WorkflowApproval.API.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/WorkflowApproval/Application.WorkflowApproval/">
+    <Project Path="src/Module/WorkflowApproval/Application/WorkflowApproval.Application.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/WorkflowApproval/Domain.WorkflowApproval/">
+    <Project Path="src/Module/WorkflowApproval/Domain/WorkflowApproval.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/Module/WorkflowApproval/Infrastructure.WorkflowApproval/">
+    <Project Path="src/Module/WorkflowApproval/Infrastructure/WorkflowApproval.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Api.Contract.Tests/Api.Contract.Tests.csproj" />
+    <Project Path="tests/Assignment.Domain.Tests/Assignment.Domain.Tests.csproj" />
+    <Project Path="tests/Audit.Domain.Tests/Audit.Domain.Tests.csproj" />
+    <Project Path="tests/IdentityAccess.Domain.Tests/IdentityAccess.Domain.Tests.csproj" />
+    <Project Path="tests/Notification.Domain.Tests/Notification.Domain.Tests.csproj" />
+    <Project Path="tests/OrganizationManagement.Domain.Tests/OrganizationManagement.Domain.Tests.csproj" />
+    <Project Path="tests/RequestManagement.Domain.Tests/RequestManagement.Domain.Tests.csproj" />
+    <Project Path="tests/SLA.Domain.Tests/SLA.Domain.Tests.csproj" />
+    <Project Path="tests/WorkflowApproval.Domain.Tests/WorkflowApproval.Domain.Tests.csproj" />
   </Folder>
 </Solution>
