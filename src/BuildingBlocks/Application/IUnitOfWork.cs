@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+namespace BuildingBlocks.Application;
 
-namespace BuildingBlocks.Application
+/// <summary>Unit of work abstraction for IdentityAccess persistence only.</summary>
+public interface IUnitOfWorkIdentityAccess
 {
-    public interface IUnitOfWorkIdentityAccess
-    {
-        Task SaveChangesAsync(
-            CancellationToken cancellationToken = default);
-    }
+    Task SaveChangesAsync(CancellationToken cancellationToken = default);
 }
