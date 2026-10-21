@@ -22,8 +22,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Module\Core\APICore\APICore.csproj" />
+    <ProjectReference Include="..\Module\OrganizationManagement\API\OrganizationManagement.API.csproj" />
     <ProjectReference Include="..\Module\IdentityAccess\API\IdentityAccess.API.csproj" />
+    <ProjectReference Include="..\Module\ServiceCatalog\API\ServiceCatalog.API.csproj" />
+    <ProjectReference Include="..\Module\RequestManagement\API\RequestManagement.API.csproj" />
+    <ProjectReference Include="..\Module\RequestManagement\Infrastructure\RequestManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\Module\WorkflowApproval\API\WorkflowApproval.API.csproj" />
+    <ProjectReference Include="..\Module\WorkflowApproval\Infrastructure\WorkflowApproval.Infrastructure.csproj" />
+    <ProjectReference Include="..\Module\Assignment\API\Assignment.API.csproj" />
+    <ProjectReference Include="..\Module\Assignment\Infrastructure\Assignment.Infrastructure.csproj" />
+    <ProjectReference Include="..\Module\SLA\API\SLA.API.csproj" />
+    <ProjectReference Include="..\Module\SLA\Infrastructure\SLA.Infrastructure.csproj" />
+    <ProjectReference Include="..\Module\Audit\API\Audit.API.csproj" />
+    <ProjectReference Include="..\Module\Audit\Infrastructure\Audit.Infrastructure.csproj" />
+    <ProjectReference Include="..\Module\Notification\API\Notification.API.csproj" />
+    <ProjectReference Include="..\Module\Notification\Infrastructure\Notification.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
