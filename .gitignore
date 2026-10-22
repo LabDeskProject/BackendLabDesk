@@ -4,3 +4,7 @@
 .vs/
 **/bin/
 **/obj/
+.env
+.env.*
+!.env.example
+.tools/

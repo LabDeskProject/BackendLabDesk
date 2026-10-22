@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Module\IdentityAccess\Infrastructure\Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Module\OrganizationManagement\Infrastructure\OrganizationManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Module\ServiceCatalog\Infrastructure\ServiceCatalog.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Module\RequestManagement\Infrastructure\RequestManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Module\WorkflowApproval\Infrastructure\WorkflowApproval.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Module\Assignment\Infrastructure\Assignment.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Module\SLA\Infrastructure\SLA.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Module\Audit\Infrastructure\Audit.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Module\Notification\Infrastructure\Notification.Infrastructure.csproj" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.11" />
+  </ItemGroup>
+</Project>
