@@ -21,6 +21,7 @@ using Audit.API;
 using Audit.Infrastructure;
 using Notification.API;
 using Notification.Infrastructure;
+using Prometheus;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -92,11 +93,19 @@ builder.Services
             OnTokenValidated = async context =>
             {
                 var userIdValue = context.Principal?.FindFirstValue(ClaimTypes.NameIdentifier);
-                if (!Guid.TryParse(userIdValue, out var userId)) { context.Fail("Invalid user identity."); return; }
+                if (!Guid.TryParse(userIdValue, out var userId)) 
+                { 
+                    context.Fail("Invalid user identity."); 
+                    return; 
+                }
                 await using var scope = context.HttpContext.RequestServices.CreateAsyncScope();
                 var users = scope.ServiceProvider.GetRequiredService<ILoginRepository>();
                 var user = await users.GetByIdAsync(userId, context.HttpContext.RequestAborted);
-                if (user is null || !user.IsActive) { context.Fail("User is inactive."); return; }
+                if (user is null || !user.IsActive) 
+                { 
+                    context.Fail("User is inactive."); 
+                    return; 
+                }
                 if (context.Principal?.IsInRole("Admin") == true && !user.IsGlobalAdmin) context.Fail("Global administrator privilege was revoked.");
             }
         };
@@ -105,9 +114,14 @@ builder.Services
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
+app.UseHttpMetrics();
 app.Use(async (context, next) =>
 {
-    try { await next(); }
+    try 
+    { 
+        await 
+        next(); 
+    }
     catch (Exception ex) when (!context.Response.HasStarted)
     {
         var (status, title) = ex switch
@@ -135,4 +149,7 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+app.MapGet("/health/live", () => Results.Ok(new { status = "Healthy" })).AllowAnonymous();
+app.MapGet("/health/ready", () => Results.Ok(new { status = "Healthy" })).AllowAnonymous();
+app.MapMetrics("/metrics");
 app.Run();

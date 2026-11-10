@@ -6,6 +6,8 @@ using Notification.Application.Interfaces;
 using Notification.Infrastructure.Dispatcher_BackgroundService;
 using Notification.Infrastructure.Repositories;
 using Notification.Infrastructure.Sender;
+using Notification.Infrastructure.Messaging;
+using Notification.Infrastructure.Messaging.RabbitMQ;
 namespace Notification.Infrastructure;
 public static class DependencyInjection
 {
@@ -14,9 +16,13 @@ public static class DependencyInjection
         var cs = configuration.GetConnectionString("DefaultConnection"); 
         if (string.IsNullOrWhiteSpace(cs)) 
             throw new InvalidOperationException("Connection string 'DefaultConnection' is not configured.");
-        services.AddNotificationApplication(); 
-        services.AddScoped<ModuleOutboxWorker>(); 
-        services.AddHostedService<NotificationDispatcher>(); 
+        services.AddNotificationApplication();
+        services.AddScoped<ModuleOutboxWorker>();
+        services.AddHostedService<NotificationDispatcher>();
+        services.AddSingleton<IOutboxMessagePublisher>(serviceProvider =>
+            configuration.GetValue("RabbitMq:Enabled", false)
+                ? new RabbitMqOutboxMessagePublisher(configuration)
+                : new DisabledOutboxMessagePublisher());
         services.AddHostedService<ModuleOutboxDispatcher>(); 
         services.AddHttpContextAccessor(); 
         services.AddScoped<INotificationUserContext, NotificationUserContext>(); 
