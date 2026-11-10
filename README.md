@@ -341,6 +341,15 @@ The solution contains domain tests for the modules and API contract tests.
 - Docker Compose is configured for local development and learning, not as-is production deployment.
 - Production database migration/adoption must be planned, backed up, and rehearsed before changes are applied to an existing database.
 
+## 🗺️ Roadmap
+
+- [ ] Add Azure deployment support for the API and background processing.
+- [ ] Provision Azure SQL and configure secure application connectivity.
+- [ ] Integrate Azure messaging and monitoring services where appropriate.
+- [ ] Add deployment automation and production-ready health/readiness checks.
+
+> Azure integration is planned; the current repository does not yet include Azure deployment resources or a completed Azure deployment.
+
 ## 🔗 References
 
 - [RabbitMQ .NET client documentation](https://www.rabbitmq.com/client-libraries/dotnet-api-guide)
